@@ -1,0 +1,13 @@
+{
+  "name": "logfolio-status-page",
+  "private": true,
+  "description": "status.logfolio.co: the page. Checks and data come from logfolio-co/status (Upptime).",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o ../assets/style.css --minify && node -e \"const f='../assets/style.css',fs=require('fs');fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace(/\\/\\*[\\s\\S]*?\\*\\//g,''))\"",
+    "watch": "tailwindcss -i src/input.css -o ../assets/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  }
+}

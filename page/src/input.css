@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@source "../../assets";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-up: var(--up);
+  --color-slow: var(--slow);
+  --color-down: var(--down);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1.05rem;
+}
+
+:root {
+  --background: #fbfaf8;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --muted: #f1f0ed;
+  --muted-foreground: #737373;
+  --border: #dfdeda;
+  --up: #059669;
+  --slow: #d97706;
+  --down: #e40014;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #070707;
+    --foreground: #fafafa;
+    --card: #101010;
+    --muted: #1f1f1f;
+    --muted-foreground: #a1a1a1;
+    --border: #ffffff1a;
+    --up: #34d399;
+    --slow: #fbbf24;
+    --down: #ff6568;
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
