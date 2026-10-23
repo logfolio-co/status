@@ -1,26 +1,70 @@
-<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <script>__SAPPER__={baseUrl:"",preloaded:[void 0,{}]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/service-worker.js');(function(){try{eval("async function x(){}");var main="/client/client.d301c898.js"}catch(e){main="/client/legacy/client.86b06838.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/client/shimport@2.0.5.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-31a52aa5.css rel=stylesheet><link href=client/createOctokit-a85f76c7.css rel=stylesheet><link href=client/index-b0b6455a.css rel=stylesheet> <title>Logfolio Status</title> <script>// If `prefers-color-scheme` is not supported, fall back to light mode.
-      // In this case, light.css will be downloaded with `highest` priority.
-      if (typeof window !== "undefined" && typeof document !== "undefined" && "matchMedia" in window && window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-        document.documentElement.style.display = 'none';
-        document.head.insertAdjacentHTML(
-          'beforeend',
-          '<link rel="stylesheet" href={`${config.path}/themes/light.css`} onload="document.documentElement.style.display = \'\'">',
-        );
-      } </script> <link href=https://status.logfolio.co/themes/light.css rel=stylesheet media=(prefers-color-scheme:light)> <link href=https://status.logfolio.co/themes/dark.css rel=stylesheet media=(prefers-color-scheme:dark)><link href=https://status.logfolio.co/global.css rel=stylesheet><link href=https://logfolio.co/icon.svg rel=icon type=image/svg><link href=https://logfolio.co/icon.svg rel=icon type=image/png><link href=https://fonts.gstatic.com rel=preconnect><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel=stylesheet><link href=https://status.logfolio.co/logfolio.css rel=stylesheet> <link href=/client/client.d301c898.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/client-31a52aa5.css rel=preload as=style><link href=/client/index.28e1ee73.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/createOctokit.fdafc7b1.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/inject_styles.803b7e80.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/createOctokit-a85f76c7.css rel=preload as=style><link href=/client/index-b0b6455a.css rel=preload as=style></head> <body> <div id=sapper> <nav class=svelte-a08hsz><div class="svelte-a08hsz container"><div><a href=https://status.logfolio.co class="svelte-a08hsz logo"><img alt="" class=svelte-a08hsz src=https://logfolio.co/icon.svg> <div>Logfolio Status</div></a></div> <ul class=svelte-a08hsz><li><a href=/ class=svelte-a08hsz target=_self aria-current=page>Status</a> <li><a href=https://logfolio.co/ class=svelte-a08hsz target=_self>Logfolio</a> <li><a href=https://help.logfolio.co/ class=svelte-a08hsz target=_self>Help</a> </li> </ul></div> </nav> <main class=container> <header class=svelte-ngkazm><h1>Is Logfolio up?</h1> <p class="svelte-ngkazm lead">Live checks of logfolio.co every 5 minutes, from outside our server. If something looks wrong and this page says it's up, email hello@logfolio.co.</header> <section class=svelte-8lnl4f><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section class=svelte-8lnl4f><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <div class="svelte-fqsq6s f changed"><h2>Live Status</h2> <form class="svelte-fqsq6s f r"><div><input class=svelte-fqsq6s id=data_day name=d type=radio value=day><label class=svelte-fqsq6s for=data_day>24h</label></div> <div><input class=svelte-fqsq6s id=data_week name=d type=radio value=week checked><label class=svelte-fqsq6s for=data_week>7d</label></div> <div><input class=svelte-fqsq6s id=data_month name=d type=radio value=month><label class=svelte-fqsq6s for=data_month>30d</label></div> <div><input class=svelte-fqsq6s id=data_year name=d type=radio value=year><label class=svelte-fqsq6s for=data_year>1y</label></div> <div><input class=svelte-fqsq6s id=data_all name=d type=radio value=all><label class=svelte-fqsq6s for=data_all>all</label></div></form></div> <section class="svelte-fqsq6s live-status"><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div> </section> <section><div class="svelte-68jxue loading"><svg class=svelte-68jxue height=38 stroke=#aaa width=38 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2 transform="translate(1 1)"><circle cx=18 cy=18 r=18 stroke-opacity=.5></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName=transform dur=1s from="0 18 18" repeatCount=indefinite to="360 18 18" type=rotate></animateTransform></path></g></g></svg></div></section></main> <footer class=svelte-jbr799><p>This page is <a href=https://github.com/logfolio-co/status>open source</a>, powered by <a href=https://upptime.js.org>Upptime</a></p> </footer></div> <script> try {
-        if (typeof window !== "undefined" && window.navigator && navigator.serviceWorker) {
-          navigator.serviceWorker.getRegistrations().then(function (registrations) {
-            for (let registration of registrations) {
-              registration.unregister();
-            }
-          });
-        }
-        if (typeof window !== "undefined" && "caches" in window) {
-          caches.keys().then(function (keyList) {
-            return Promise.all(
-              keyList.map(function (key) {
-                return caches.delete(key);
-              })
-            );
-          });
-        }
-      } catch (error) {} </script> 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logfolio Status</title>
+    <meta name="description" content="Is Logfolio up? Live checks of logfolio.co, profiles and the help center every 5 minutes, from outside our server." />
+    <link rel="icon" href="https://logfolio.co/icon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://status.logfolio.co/" />
+    <meta property="og:title" content="Logfolio Status" />
+    <meta property="og:description" content="Live checks of logfolio.co every 5 minutes, from outside our server." />
+    <meta property="og:url" content="https://status.logfolio.co/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="min-h-dvh">
+    <header class="border-b">
+      <div class="mx-auto flex h-16 w-full max-w-3xl items-center justify-between gap-4 px-4">
+        <a href="/" class="flex items-center gap-2.5 font-semibold">
+          <img src="https://logfolio.co/icon.svg" alt="" width="28" height="28" class="size-7 rounded-md dark:invert" />
+          <span>Logfolio Status</span>
+        </a>
+        <nav class="flex items-center gap-5 text-sm text-muted-foreground">
+          <a href="https://logfolio.co/" class="hover:text-foreground">Logfolio</a>
+          <a href="https://help.logfolio.co/" class="hover:text-foreground">Help</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-10">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold tracking-tight">Is Logfolio up?</h1>
+        <p class="text-pretty text-muted-foreground">Live checks of logfolio.co every 5 minutes, from outside our server. If something looks wrong and this page says it's up, email <a href="mailto:hello@logfolio.co" class="underline underline-offset-4 hover:text-foreground">hello@logfolio.co</a>.</p>
+      </div>
+
+      <section id="overall" class="flex items-center gap-3 rounded-xl border bg-card px-5 py-4" aria-live="polite">
+        <span class="size-2.5 shrink-0 animate-pulse rounded-full bg-muted-foreground/40" aria-hidden="true"></span>
+        <span class="font-medium">Checking…</span>
+      </section>
+
+      <section class="flex flex-col gap-3" aria-labelledby="services">
+        <div class="flex items-baseline justify-between gap-4">
+          <h2 id="services" class="text-lg font-semibold">Services</h2>
+          <p id="updated" class="text-sm text-muted-foreground"></p>
+        </div>
+        <ul id="sites" class="divide-y overflow-hidden rounded-xl border bg-card">
+          <li class="px-5 py-4 text-sm text-muted-foreground">Loading…</li>
+        </ul>
+      </section>
+
+      <section class="flex flex-col gap-3" aria-labelledby="incidents">
+        <h2 id="incidents" class="text-lg font-semibold">Past incidents</h2>
+        <ul id="incident-list" class="divide-y overflow-hidden rounded-xl border bg-card">
+          <li class="px-5 py-4 text-sm text-muted-foreground">Loading…</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="border-t">
+      <div class="mx-auto flex w-full max-w-3xl flex-wrap items-center justify-between gap-x-5 gap-y-2 px-4 py-6 text-sm text-muted-foreground">
+        <span>Checks run on GitHub every 5 minutes, outside our server.</span>
+        <a href="https://github.com/logfolio-co/status" class="hover:text-foreground">Powered by Upptime</a>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
