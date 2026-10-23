@@ -1,31 +1,34 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Logfolio's status page (status.logfolio.co), run by Upptime on GitHub
+# Actions: checks from outside our server every 5 minutes, so it still
+# works when the VPS is down. A site that fails opens an issue (GitHub
+# emails the assignees) and closes it when the site is back.
+owner: logfolio-co
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # The homepage: the app answers at all.
+  - name: Website
+    url: https://logfolio.co/
+  # A public profile: the app reads the database.
+  - name: Profiles
+    url: https://logfolio.co/naeem/
+  - name: Help center
+    url: https://help.logfolio.co/
+
+# GitHub usernames to assign (and email) when a site goes down.
+assignees:
+  - naeemnur
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.logfolio.co
+  logoUrl: https://logfolio.co/icon.svg
+  name: Logfolio Status
+  introTitle: "Is Logfolio up?"
+  introMessage: "Live checks of logfolio.co every 5 minutes, from outside our server. If something looks wrong and this page says it's up, email hello@logfolio.co."
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Logfolio
+      href: https://logfolio.co/
+    - title: Help
+      href: https://help.logfolio.co/
