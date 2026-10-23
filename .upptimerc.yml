@@ -22,6 +22,16 @@ assignees:
 status-website:
   cname: status.logfolio.co
   logoUrl: https://logfolio.co/icon.svg
+  favicon: https://logfolio.co/icon.svg
+  faviconSvg: https://logfolio.co/icon.svg
+  # Logfolio's look (logfolio.co): DM Sans, its colours, light and dark.
+  links:
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap
+    - rel: stylesheet
+      href: https://status.logfolio.co/logfolio.css
   name: Logfolio Status
   introTitle: "Is Logfolio up?"
   introMessage: "Live checks of logfolio.co every 5 minutes, from outside our server. If something looks wrong and this page says it's up, email hello@logfolio.co."
