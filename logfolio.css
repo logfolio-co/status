@@ -1,0 +1,88 @@
+html:root {
+  --body-background-color: #fbfaf8;
+  --body-text-color: #0a0a0a;
+  --card-background-color: #ffffff;
+  --nav-background-color: #fbfaf8;
+  --nav-border-bottom-color: #dfdeda;
+  --nav-current-border-bottom-color: #171717;
+  --card-border-color: #dfdeda;
+  --down-border-left-color: #e40014;
+  --down-background-color: #fde8e8;
+  --degraded-border-left-color: #d97706;
+  --up-border-left-color: #059669;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #059669;
+  --tag-down-background-color: #e40014;
+  --tag-degraded-background-color: #d97706;
+  --change-background-color: #d97706;
+  --error-button-border-color: #171717;
+  --error-button-background-color: #171717;
+  --error-button-color: #fafafa;
+  --submit-button-border-color: #171717;
+  --submit-button-background-color: #171717;
+  --submit-button-color: #fafafa;
+  --graph-opacity: 0.55;
+  --graph-filter: grayscale(1);
+  --muted-text-color: #737373;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:root {
+    --body-background-color: #070707;
+    --body-text-color: #fafafa;
+    --card-background-color: #101010;
+    --nav-background-color: #070707;
+    --nav-border-bottom-color: #ffffff1a;
+    --nav-current-border-bottom-color: #fafafa;
+    --card-border-color: #ffffff1a;
+    --down-border-left-color: #ff6568;
+    --down-background-color: #3a0d10;
+    --degraded-border-left-color: #fbbf24;
+    --up-border-left-color: #34d399;
+    --tag-color: #070707;
+    --tag-up-background-color: #34d399;
+    --tag-down-background-color: #ff6568;
+    --tag-degraded-background-color: #fbbf24;
+    --change-background-color: #fbbf24;
+    --error-button-border-color: #e5e5e5;
+    --error-button-background-color: #e5e5e5;
+    --error-button-color: #171717;
+    --submit-button-border-color: #e5e5e5;
+    --submit-button-background-color: #e5e5e5;
+    --submit-button-color: #171717;
+    --graph-opacity: 0.45;
+    --graph-filter: grayscale(1) invert(1);
+    --muted-text-color: #a1a1a1;
+  }
+
+  nav img {
+    filter: invert(1);
+  }
+}
+
+body {
+  font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+article {
+  border-radius: 1.05rem;
+  overflow: hidden;
+}
+
+nav {
+  border-bottom-width: 1px;
+}
+
+footer,
+footer a {
+  color: var(--muted-text-color);
+}
