@@ -17,12 +17,12 @@
 }
 
 :root {
-  --background: #fbfaf8;
-  --foreground: #0a0a0a;
+  --background: #ffffff;
+  --foreground: #1c1a17;
   --card: #ffffff;
-  --muted: #f1f0ed;
-  --muted-foreground: #737373;
-  --border: #dfdeda;
+  --muted: #f6f4ef;
+  --muted-foreground: #6b665d;
+  --border: #ebe8e1;
   --up: #059669;
   --slow: #d97706;
   --down: #e40014;
