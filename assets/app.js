@@ -71,10 +71,22 @@ async function load() {
     // Each site's file says when checks began and when it was last checked.
     const ymls = await Promise.all(sites.map((s) => fetch(`${RAW}/history/${s.slug}.yml`, { cache: "no-store" }).then((r) => (r.ok ? r.text() : ""))));
     const starts = ymls.map((y) => field(y, "startTime"));
-    const checked = ymls.map((y) => field(y, "lastUpdated")).filter(Boolean).sort().at(-1);
+    // A site's file only changes when its status does, so "last check" is
+    // the newest finished check run (Uptime CI); the file's time is the
+    // fallback, labelled as the last change.
+    const changedAt = ymls.map((y) => field(y, "lastUpdated")).filter(Boolean).sort().at(-1);
     overall(sites);
     $("sites").innerHTML = sites.map((s, i) => siteRow(s, starts[i])).join("");
-    $("updated").textContent = checked ? `Checked ${ago(checked)}` : "";
+    $("updated").textContent = changedAt ? `Last change ${ago(changedAt)}` : "";
+    fetch(`https://api.github.com/repos/${REPO}/actions/workflows/uptime.yml/runs?per_page=1&status=success`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        const at = d?.workflow_runs?.[0]?.updated_at;
+        if (at) {
+          $("updated").textContent = `Last check ${ago(at)}`;
+        }
+      })
+      .catch(() => {});
   } catch {
     $("overall").innerHTML = `<span class="size-2.5 shrink-0 rounded-full bg-muted-foreground/40" aria-hidden="true"></span><span class="font-medium">Couldn't load the latest checks.</span>`;
     $("sites").innerHTML = `<li class="px-5 py-4 text-sm text-muted-foreground">See them on <a class="underline underline-offset-4" href="https://github.com/${REPO}">GitHub</a>.</li>`;
